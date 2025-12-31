@@ -1,26 +1,26 @@
-# Geo / Cal
+## Geo / Cal
 
 **Geo / Cal** is a simple command-line application written in Rust that calculates the distance between two points in 2D space. This application uses the Euclidean distance formula to provide accurate distance calculations.
 
-## Features
+### Features
 
 - Calculate the distance between two points in 2D space.
 - User-friendly command-line interface.
 - Handles invalid input gracefully.
 - Option to exit the program at any time by entering 'q' or 'quit'.
 
-## Installation
+### Installation
 
 You can install Geo / Cal using Cargo, Rust's package manager. Simply run the following command:
 
 ```bash
 cargo install geo-cal
 ```
-## Usage
+### Usage
 ```bash
 geo-cal
 ```
-## Example interaction
+### Example interaction
 ```code
 --------- Main Menu -----------
 1. Distance calculation
