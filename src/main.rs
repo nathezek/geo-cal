@@ -40,11 +40,23 @@ fn main() {
                     // coordinates for P:
                     println!("\nFirst coordinates:");
                     let x1 = get_input("Enter x1: ");
+                    if x1.is_none() {
+                        break 'compute_distance_loop;
+                    }
                     let y1 = get_input("Enter y1: ");
+                    if y1.is_none() {
+                        break 'compute_distance_loop;
+                    }
                     // coordinates for Q:
                     println!("\nSecond coordinates:");
                     let x2 = get_input("Enter x2: ");
+                    if x2.is_none() {
+                        break 'compute_distance_loop;
+                    }
                     let y2 = get_input("Enter y2: ");
+                    if y2.is_none() {
+                        break 'compute_distance_loop;
+                    }
 
                     if let (Some(x1), Some(y1), Some(x2), Some(y2)) = (x1, y1, x2, y2) {
                         println!("\nThe result is D = {}", compute_distance(x1, y1, x2, y2));
