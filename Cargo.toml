@@ -3,6 +3,7 @@ name = "geo-cal"
 version = "0.0.1-beta"
 description = "A cli tool to calcuate analytical geometry questions, like distances, circle, parabola and more with guided steps."
 repository = "https://github.com/nathezek/geo-cal.git"
+license = "Apache-2.0"
 edition = "2024"
 
 [dependencies]
