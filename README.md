@@ -22,21 +22,43 @@ geo-cal
 ```
 ### Example interaction
 ```code
+ ██████╗ ███████╗ ██████╗     ██╗ ██████╗ █████╗ ██╗
+██╔════╝ ██╔════╝██╔═══██╗   ██╔╝██╔════╝██╔══██╗██║
+██║  ███╗█████╗  ██║   ██║  ██╔╝ ██║     ███████║██║
+██║   ██║██╔══╝  ██║   ██║ ██╔╝  ██║     ██╔══██║██║
+╚██████╔╝███████╗╚██████╔╝██╔╝   ╚██████╗██║  ██║███████╗
+ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝     ╚═════╝╚═╝  ╚═╝╚══════╝
+
+
+
 --------- Main Menu -----------
 1. Distance calculation
 2. Distance of Line Segment
+l. List all forms of line equations
 q. Quit program
-Enter your choice (1, 2, or q): 1
+Enter your choice (1, 2, 3, 4 or q): 1
 
-Entering distance between two points. Provide the coordinates.
+
+Entering distance b/n two points. Provide the coordinates.
 
 First coordinates:
-Enter x1: 3
-Enter y1: 4
+Enter x₁: 1
+Enter y₁: 1
 
 Second coordinates:
-Enter x2: 7
-Enter y2: 1
+Enter x₂: 4
+Enter y₂: 4
 
-The result is D = 5.0
+We are given: P(1,1) & Q (4,4)
+
+    Formula -> D =  √((x₂ - x₁)²  +  (y₂ - y₁)²)
+
+
+Step 1. Plug it in -> D = √((4 - 1)² + (4 + 1)²)
+
+Step 2. We now have -> D = √(3² + 3²)
+
+Step 3. Evaluate the squares -> D = √18
+
+The result is D = 4.242640687119285
 ```
