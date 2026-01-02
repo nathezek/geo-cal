@@ -60,21 +60,21 @@ fn main() {
                 'compute_distance_loop: loop {
                     // coordinates for P:
                     println!("\nFirst coordinates:");
-                    let x1 = get_input("Enter x1: ");
+                    let x1 = get_input("Enter x₁: ");
                     if x1.is_none() {
                         break 'compute_distance_loop;
                     }
-                    let y1 = get_input("Enter y1: ");
+                    let y1 = get_input("Enter y₁: ");
                     if y1.is_none() {
                         break 'compute_distance_loop;
                     }
                     // coordinates for Q:
                     println!("\nSecond coordinates:");
-                    let x2 = get_input("Enter x2: ");
+                    let x2 = get_input("Enter x₂: ");
                     if x2.is_none() {
                         break 'compute_distance_loop;
                     }
-                    let y2 = get_input("Enter y2: ");
+                    let y2 = get_input("Enter y₂: ");
                     if y2.is_none() {
                         break 'compute_distance_loop;
                     }
@@ -95,31 +95,31 @@ fn main() {
                 'compute_distance_of_line_segment_loop: loop {
                     // coordinates for P:
                     println!("\nFirst coordinates:");
-                    let x1 = get_input("Enter x1: ");
+                    let x1 = get_input("Enter x₁: ");
                     if x1.is_none() {
                         break 'compute_distance_of_line_segment_loop;
                     }
-                    let y1 = get_input("Enter y1: ");
+                    let y1 = get_input("Enter y₁: ");
                     if y1.is_none() {
                         break 'compute_distance_of_line_segment_loop;
                     }
                     // coordinates for Q:
                     println!("\nSecond coordinates:");
-                    let x2 = get_input("Enter x2: ");
+                    let x2 = get_input("Enter x₂: ");
                     if x2.is_none() {
                         break 'compute_distance_of_line_segment_loop;
                     }
-                    let y2 = get_input("Enter y2: ");
+                    let y2 = get_input("Enter y₂: ");
                     if y2.is_none() {
                         break 'compute_distance_of_line_segment_loop;
                     }
                     // ratio of r1 and r2:
                     println!("\nRatio:");
-                    let r1 = get_input("Enter r1: ");
+                    let r1 = get_input("Enter r₁: ");
                     if r1.is_none() {
                         break 'compute_distance_of_line_segment_loop;
                     }
-                    let r2 = get_input("Enter r2: ");
+                    let r2 = get_input("Enter r₂: ");
                     if r2.is_none() {
                         break 'compute_distance_of_line_segment_loop;
                     }
@@ -152,21 +152,19 @@ fn compute_distance(x1: f64, y1: f64, x2: f64, y2: f64) -> f64 {
     println!("\nWe are given: P({},{}) & Q ({},{})", x1, y1, x2, y2);
     println!(
         r#"
-                      ______________________________
-    Formula -> D =  \| (x2 - x1)^2  +  (y2 - y1)^2 
-        
+    Formula -> D =  √((x₂ - x₁)²  +  (y₂ - y₁)²) 
     "#
     );
     println!(
-        "\nStep 1. Plug it in -> D = sqrt ({} - {})^2 + ({} + {})^2)",
+        "\nStep 1. Plug it in -> D = √(({} - {})² + ({} + {})²)",
         x2, x1, y2, y1
     );
     let x = x2 - x1;
     let y = y2 - y1;
-    println!("\nStep 2. We now have -> D = sqrt({}^2 + {}^2)", x, y);
+    println!("\nStep 2. We now have -> D = √({}² + {}²)", x, y);
 
     let d_in_sqrt = x.powi(2) + y.powi(2);
-    println!("\nStep 3. Evaluate the squares -> D = sqrt({})", d_in_sqrt);
+    println!("\nStep 3. Evaluate the squares -> D = √{}", d_in_sqrt);
 
     d_in_sqrt.sqrt()
 }
@@ -186,11 +184,11 @@ fn compute_distance_of_line_segment(
     println!(
         r#"
 
-     Formula -> R =    /                                 \
-                      |  x1.r2 + x2.r1  ,  y1.r2 + y2.r1  |
-                      |  -------------     -------------  |
-                      |    r1 + r2            r1 + r2     |
-                       \                                 /
+     Formula -> R =    /                               \
+                      |  x₁r₂ + x₂r₁   ,  y₁r₂ + y₂r₁   |
+                      |  -------------   -------------  |
+                      |    r₁ + r₂          r₁ + r₂     |
+                       \                               /
     "#
     );
     let sumation_x = (x1 * r2) + (x2 * r1);
